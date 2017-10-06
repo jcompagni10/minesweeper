@@ -1,6 +1,6 @@
 class Tile
-  def initialize(value, visibility = false)
-    @visiblity = visbility
+  def initialize(value, visible = false)
+    @visible = visible
     @value = value
 
   end
@@ -14,7 +14,7 @@ class Tile
   end
 
   def to_s
-    if @visibility
+    if @visible
       if is_bomb?
         "b"
       elsif is_empty?
@@ -28,7 +28,7 @@ class Tile
   end
 
   def reveal
-    @visiblity = true
+    @visible = true
   end
-  
+
 end

@@ -1,8 +1,11 @@
+require_relative "tile"
+
 class Board
   def initialize(size)
     @size = size
     @board = Array.new(size) {Array.new(size)}
     generate_bombs
+    fill_all_tiles
   end
 
   def generate_bombs
