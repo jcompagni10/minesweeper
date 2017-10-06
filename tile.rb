@@ -1,8 +1,8 @@
 class Tile
-  def initialize(value, visible = false)
+  attr_accessor :value
+  def initialize(value=nil, visible = false)
     @visible = visible
     @value = value
-
   end
 
   def is_bomb?
