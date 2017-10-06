@@ -41,4 +41,22 @@ class Board
     tiles
   end
 
+  def each_tile(&prc)
+    @board.each do |row|
+      row.each do |cell|
+        prc.call(cell)
+      end
+    end
+  end
+
+
+
+  def render
+    @board.each do |row|
+      row.each do |cell|
+        print cell
+      end
+      puts ""
+    end
+  end
 end

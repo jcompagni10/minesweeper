@@ -30,4 +30,5 @@ class Tile
   def reveal
     @visiblity = true
   end
+  
 end
